@@ -2,19 +2,23 @@
   "name": "my_library_graphql",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon src/index.js",
+    "start-new": "node -r esm .",
+    "dev": "nodemon -r esm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.18.2",
-    "graphql": "^15.3.0"
+    "esm": "^3.2.25",
+    "graphql": "^15.3.0",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.9"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
     "nodemon": "^2.0.5"
   }
 }
