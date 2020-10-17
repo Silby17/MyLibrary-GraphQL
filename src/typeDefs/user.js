@@ -1,11 +1,10 @@
 import {gql} from 'apollo-server'
-import root from "./root"
 
 export default gql`
 
     extend type Query {
         user(id: ID!): User
-        users: [User!]!
+        users: [User!]
     }
 
     extend type Mutation {
@@ -18,5 +17,6 @@ export default gql`
         username: String!
         name: String!
         createdAt: String!
+        updatedAt: String!
     }
 `

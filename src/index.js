@@ -1,10 +1,7 @@
 import {ApolloServer, gql} from 'apollo-server'
 import typeDefs from './typeDefs'
 import resolvers from './resolvers'
-
-const {
-    APP_PORT = 4000
-} = process.env
+import {APP_PORT } from './config'
 
 const server = new ApolloServer({
     typeDefs,

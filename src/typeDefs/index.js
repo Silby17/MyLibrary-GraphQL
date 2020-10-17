@@ -1,7 +1,11 @@
 import user from './user'
 import root from "./root"
+import book from './book'
+import author from './author'
 
 export default [
     root,
-    user
+    user,
+    book,
+    author
 ]

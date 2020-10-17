@@ -1,5 +1,9 @@
-import user from './user'
+import user from './userResolver'
+import book from './bookResolver'
+import author from './authorResolver'
 
 export default [
-    user
+    user,
+    book,
+    author
 ]
