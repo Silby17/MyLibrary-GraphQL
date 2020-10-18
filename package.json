@@ -4,9 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
-    "start-new": "node -r esm .",
-    "dev": "nodemon -r esm",
+    "start": "nodemon -r esm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
