@@ -3,7 +3,7 @@ import {gql} from 'apollo-server'
 export default gql`
 
     extend type Query {
-        book(title: String!): Book
+        book(title: String!): [Book]
         books: [Book!]
     }
 

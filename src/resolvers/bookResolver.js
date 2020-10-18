@@ -4,18 +4,16 @@ import mongoose from 'mongoose'
 export default {
     Query: {
         books: (parent, args, ctx, info) => {
-            // TODO check authentication, projection
             return Book.find({})
         },
-        book: (parent, args, ctx, info) => {
-            console.log('Book of book resolver running')
-            // if (!mongoose.Types.ObjectId.isValid(args.id)) {
-            //     throw new Error(`${args.id} is not a valid _id`)
-            // }
-            // return User.findById(args.id)
+        book: async (parent, args, ctx, info) => {
+            return Book.find({
+                'title': {
+                    $regex: new RegExp(args.title)
+                }
+            })
         }
     },
-
     Mutation: {
         createBook: async (parent, args, ctx, info) => {
             console.log(JSON.stringify(args))

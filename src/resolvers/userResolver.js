@@ -15,7 +15,6 @@ export default {
             return User.findById(args.id)
         }
     },
-
     Mutation: {
         signUp: (parent, args, ctx, info) => {
             const password = args.password
